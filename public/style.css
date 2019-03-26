@@ -1,0 +1,403 @@
+
+body {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  header{
+    display: flex;
+    height: 150px;
+    background-color: cornflowerblue;
+  }
+
+  header .logo .heading h1{
+    display: block;
+    height: 100%;
+    color: transparent;
+    text-align: center;
+
+    margin: auto;
+    z-index: 5;
+    bottom: 50px;
+  }
+
+  header .logo .heading h1:hover{
+    color: white;
+    transition: color .7s linear;
+  }
+
+header a{
+  text-decoration: none;
+}
+
+  .logo{
+    position: relative;
+    margin: auto;
+    height: 70px;
+  }
+
+  .logo:hover{
+    height: 100px;
+    transition: height 1s;
+  }
+
+  .heading{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    bottom: 70px;
+    z-index: 4;
+
+  }
+
+  .globe{
+    display: block;
+    margin: auto;
+    z-index: 2;
+    width: auto;
+    height: 100%;
+
+  }
+
+  .globe:hover{
+    width: 100px;
+  }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 300px 10px repeat(7, minmax(50px, 1fr)) 250px;
+/*    grid-row-gap: 20px; */
+    z-index: 1;
+    text-align: center;
+  }
+
+fieldset {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    border: none;
+    display: none;
+  }
+
+  .nav-toggle{
+    display: none;
+  }
+
+  .nav-toggle-label{
+    position: absolute;
+    left: 40px;
+    top: 60px;
+  }
+
+  .nav-toggle:checked ~ fieldset {
+    display: block;
+  }
+
+.plainInput{
+  border: solid 2px grey;
+  background-color: white;
+}
+
+  .plainInput, p {
+    display: block;
+    font-weight:300;
+    width: 100%;
+    font-size: 3em;
+    border-radius: 2px;
+    outline: none;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #515151;
+
+    font-family: Open Sans,Verdana;
+    padding: 25px 15px;
+    margin: 30px 0px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  .plainInput:focus {
+    border: solid grey 2px;
+  }
+  .plainButton {
+    font-size: 3em;
+    color: #515151;
+    background-color: rgba(255, 255, 255, 0.5);
+    border:5px solid white;
+    padding:50px 30px;
+    width: 100%;
+    min-width: 350px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  .plainButton:hover {
+    border:8px solid white;
+  }
+
+.city{
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-top: 40px;
+}
+
+.cityInner{
+  margin-top: auto;
+}
+
+.city h1{
+  color: white;
+  font-size: 3em;
+}
+
+  .temp{
+    grid-column: 1 / 3;
+    grid-row: 4 / 6;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-self: stretch;
+  }
+
+.tempInner{
+/*  margin-top: 50px;*/
+}
+
+  .temp p{
+    color: white;
+    font-size: 9em;
+  }
+
+  .icon{
+    grid-column: 3 / 5;
+    grid-row: 4 / 6;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-self: stretch;
+    align-self: stretch;
+  }
+
+  .icon p{
+    color: white;
+    font-size: 2.4em;
+    margin: 0;
+  }
+
+  .iconImage{
+    display: block;
+    margin: auto;
+  }
+
+.iconInner{
+ /* margin-top: 50px;*/
+}
+
+  .windSpeed{
+    grid-column: 1 / 3;
+    grid-row: 6 / 7;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .windSpeed p{
+    color: white;
+    font-size: 2.4em;
+  }
+
+  .windDirection{
+    grid-column: 3 / 5;
+    grid-row: 6 / 7;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .pressure{
+    grid-column: 1 / -1;
+    grid-row: 7 / 8;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .pressure p{
+    color: white;
+    font-size: 2.4em;
+  }
+
+  .humidity{
+    grid-column: 1 / -1;
+    grid-row: 8 / 9;
+    background-color: rgba(0, 0, 0, 0.6);
+
+  }
+
+  .humidity p{
+    color: white;
+    font-size: 2.4em;
+  }
+
+  footer{
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    background-color: cornflowerblue;
+  }
+
+  footer p{
+    color: white;
+    text-align: center;
+  }
+
+  img{
+    width: 200px;
+    height: auto;
+  }
+
+  .windDir{
+    width: 100px;
+    height: auto;
+    margin-top: 50px;
+  }
+
+  .burgerMenu{
+    width: 50px;
+    height: auto;
+  }
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 630px) {
+  .city{
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+  }
+  
+  .cityInner{
+    margin-top: auto;
+  }
+  
+  .city h1{
+    color: white;
+    font-size: 1.5em;
+  }
+  
+  .tempInner{
+  /*  margin-top: 50px;*/
+  }
+  
+    .temp p{
+      color: white;
+      font-size: 4.5em;
+    }
+  
+    .icon p{
+      color: white;
+      font-size: 1.2em;
+      margin: 0;
+    }
+  
+    .windSpeed p{
+      color: white;
+      font-size: 1.2em;
+    }
+  
+    .pressure p{
+      color: white;
+      font-size: 1.2em;
+    }
+  
+    .humidity p{
+      color: white;
+      font-size: 1.2em;
+    }
+  
+    footer p{
+      color: white;
+    }
+  
+    img{
+      width: 100px;
+      height: auto;
+    }
+  
+    .windDir{
+      width: 50px;
+      height: auto;
+      margin-top: 50px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {background: blue;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .city{
+    grid-column: 2 / -2;
+    grid-row: 4 / 5;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+  }
+  
+    .temp{
+      grid-column: 2 / 3;
+      grid-row: 5 / 7;
+      background-color: rgba(0, 0, 0, 0.5);
+      align-self: stretch;
+    }
+  
+    .icon{
+      grid-column: 3 / 4;
+      grid-row: 5 / 7;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-self: stretch;
+      align-self: stretch;
+    }
+  
+    .iconImage{
+      display: block;
+      margin: auto;
+    }
+  
+    .windSpeed{
+      grid-column: 2 / 3;
+      grid-row: 7 / 8;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  
+    .windDirection{
+      grid-column: 3 / 4;
+      grid-row: 7 / 8;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  
+    .pressure{
+      grid-column: 2 / -2;
+      grid-row: 8 / 9;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  
+    .humidity{
+      grid-column: 2 / -2;
+      grid-row: 9 / 10;
+      background-color: rgba(0, 0, 0, 0.5);
+  
+    }
+
+    fieldset {
+      grid-column: 2 / -2;
+      grid-row: 2 / 3;
+      border: none;
+    }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}
